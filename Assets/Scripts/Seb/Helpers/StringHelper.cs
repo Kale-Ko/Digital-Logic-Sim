@@ -14,7 +14,7 @@ namespace Seb.Helpers
 			return text.Split(newLineStrings, options);
 		}
 
-		public static string CreateBinaryString(uint value, bool removeLeadingZeroes = false)
+		public static string CreateBinaryString(ulong value, bool removeLeadingZeroes = false)
 		{
 			string binary = Convert.ToString(value, 2);
 			if (!removeLeadingZeroes)
@@ -33,7 +33,7 @@ namespace Seb.Helpers
 			return string.Join(" ", grouped);
 		}
 
-		public static int CreateIntegerStringNonAlloc(char[] charArray, int value)
+		public static int CreateIntegerStringNonAlloc(char[] charArray, long value)
 		{
 			bool isNegative = value < 0;
 			value = Math.Abs(value);
@@ -58,13 +58,13 @@ namespace Seb.Helpers
 			return charCount;
 		}
 
-		public static int CreateHexStringNonAlloc(char[] charArray, int value, bool upperCase = true)
+		public static int CreateHexStringNonAlloc(char[] charArray, long value, bool upperCase = true)
 		{
 			const string hexDigits = "0123456789ABCDEF";
 			const string hexDigitsLower = "0123456789abcdef";
 
 			int charCount = 0;
-			uint uValue = (uint)value;
+			ulong uValue = (ulong)value;
 			do
 			{
 				charArray[charCount++] = (upperCase ? hexDigits : hexDigitsLower)[(int)(uValue & 0xF)];
