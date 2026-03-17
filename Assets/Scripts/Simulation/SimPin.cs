@@ -7,7 +7,7 @@ namespace DLS.Simulation
 		public readonly int ID;
 		public readonly SimChip parentChip;
 		public readonly bool isInput;
-		public uint State;
+		public ulong State;
 
 		public SimPin[] ConnectedTargetPins = Array.Empty<SimPin>();
 
@@ -63,15 +63,15 @@ namespace DLS.Simulation
 				// Note: for multi-bit pins, this choice is made identically for all bits, rather than individually.
 				// Todo: maybe consider changing to per-bit in the future...)
 
-				uint OR = source.State | State;
-				uint AND = source.State & State;
-				ushort bitsNew = (ushort)(Simulator.RandomBool() ? OR : AND); // randomly accept or reject conflicting state
+				ulong OR = source.State | State;
+				ulong AND = source.State & State;
+				uint bitsNew = (uint)(Simulator.RandomBool() ? OR : AND); // randomly accept or reject conflicting state
 
-				ushort mask = (ushort)(OR >> 16); // tristate flags
-				bitsNew = (ushort)((bitsNew & ~mask) | ((ushort)OR & mask)); // can always accept input for tristated bits
+				uint mask = (uint)(OR >> 32); // tristate flags
+				bitsNew = (uint)((bitsNew & ~mask) | ((uint)OR & mask)); // can always accept input for tristated bits
 
-				ushort tristateNew = (ushort)(AND >> 16);
-				uint stateNew = (uint)(bitsNew | (tristateNew << 16));
+				uint tristateNew = (uint)(AND >> 32);
+				ulong stateNew = (ulong)(bitsNew | (tristateNew << 32));
 				set = stateNew != State;
 				State = stateNew;
 			}

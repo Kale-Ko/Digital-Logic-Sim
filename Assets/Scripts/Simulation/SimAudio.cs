@@ -40,7 +40,7 @@ namespace DLS.Simulation
 			}
 		}
 
-		public void RegisterNote(int index, uint volume)
+		public void RegisterNote(uint index, uint volume)
 		{
 			if (volume == 0) return;
 

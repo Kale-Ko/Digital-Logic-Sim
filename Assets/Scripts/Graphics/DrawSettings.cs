@@ -11,8 +11,10 @@ namespace DLS.Graphics
 		// ---- World draw settings ----
 		public const float GridSize = 0.125f;
 		public const float PinHeight1Bit = 0.185f;
-		public const float PinHeight4Bit = 0.3f;
-		public const float PinHeight8Bit = 0.43f;
+		public const float PinHeight4Bit = 0.21f;
+		public const float PinHeight8Bit = 0.42f;
+		public const float PinHeight16Bit = 0.84f;
+		public const float PinHeight32Bit = 1.68f;
 		public const float PinRadius = PinHeight1Bit / 2;
 
 		public const FontType FontBold = FontType.JetbrainsMonoBold;
