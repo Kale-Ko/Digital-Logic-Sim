@@ -18,8 +18,8 @@
       "Name":"IN",
       "ID":1073163767,
       "Position":{
-        "x":-6.67961,
-        "y":2.06796
+        "x":-6.625,
+        "y":1.3125
       },
       "BitCount":1,
       "Colour":0,
@@ -29,45 +29,45 @@
       "Name":"IN",
       "ID":1737208920,
       "Position":{
-        "x":-6.54369,
-        "y":0.76699
+        "x":-6.625,
+        "y":0.75
       },
       "BitCount":4,
       "Colour":0,
-      "ValueDisplayMode":0
+      "ValueDisplayMode":1
     },
     {
       "Name":"IN",
       "ID":1157885679,
       "Position":{
-        "x":-6.58252,
-        "y":-0.30097
+        "x":-6.625,
+        "y":0.0
       },
       "BitCount":8,
       "Colour":0,
-      "ValueDisplayMode":0
+      "ValueDisplayMode":1
     },
     {
       "Name":"IN",
       "ID":116433049,
       "Position":{
-        "x":-6.50485,
-        "y":-1.54369
+        "x":-6.625,
+        "y":-1.0
       },
       "BitCount":16,
       "Colour":0,
-      "ValueDisplayMode":0
+      "ValueDisplayMode":1
     },
     {
       "Name":"IN",
       "ID":1856041381,
       "Position":{
-        "x":-6.54369,
-        "y":-2.70874
+        "x":-6.625,
+        "y":-2.625
       },
       "BitCount":32,
       "Colour":0,
-      "ValueDisplayMode":0
+      "ValueDisplayMode":1
     }
   ],
   "OutputPins":[
@@ -75,8 +75,8 @@
       "Name":"OUT",
       "ID":532960899,
       "Position":{
-        "x":0.56311,
-        "y":2.26214
+        "x":0.5,
+        "y":1.3125
       },
       "BitCount":1,
       "Colour":0,
@@ -86,45 +86,45 @@
       "Name":"OUT",
       "ID":132849504,
       "Position":{
-        "x":0.42718,
-        "y":1.31068
+        "x":0.5,
+        "y":0.75
       },
       "BitCount":4,
       "Colour":0,
-      "ValueDisplayMode":0
+      "ValueDisplayMode":2
     },
     {
       "Name":"OUT",
       "ID":2018859404,
       "Position":{
-        "x":0.54369,
-        "y":0.21266
+        "x":0.5,
+        "y":0.0
       },
       "BitCount":8,
       "Colour":0,
-      "ValueDisplayMode":0
+      "ValueDisplayMode":2
     },
     {
       "Name":"OUT",
       "ID":803964916,
       "Position":{
-        "x":0.52427,
-        "y":-1.38835
+        "x":0.5,
+        "y":-1.0
       },
       "BitCount":16,
       "Colour":0,
-      "ValueDisplayMode":0
+      "ValueDisplayMode":2
     },
     {
       "Name":"OUT",
       "ID":2008267234,
       "Position":{
-        "x":1.1068,
-        "y":-2.65049
+        "x":0.5,
+        "y":-2.625
       },
       "BitCount":32,
       "Colour":0,
-      "ValueDisplayMode":0
+      "ValueDisplayMode":2
     }
   ],
   "SubChips":[],

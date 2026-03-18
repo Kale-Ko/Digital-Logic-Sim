@@ -16,7 +16,7 @@ namespace Seb.Helpers
 
 		public static string CreateBinaryString(ulong value, bool removeLeadingZeroes = false)
 		{
-			string binary = Convert.ToString(value, 2);
+			string binary = Convert.ToString((long) value, 2);
 			if (!removeLeadingZeroes)
 			{
 				binary = binary.PadLeft(32, '0');
