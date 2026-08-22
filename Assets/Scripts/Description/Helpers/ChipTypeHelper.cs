@@ -22,8 +22,8 @@ namespace DLS.Description
 			// ---- Split / Merge ----
 			{ ChipType.Merge_1To4Bit, "1-4BIT" },
 			{ ChipType.Merge_1To8Bit, "1-8BIT" },
-			{ ChipType.Merge_4To8Bit, "4-8BIT" },
 			{ ChipType.Split_4To1Bit, "4-1BIT" },
+			{ ChipType.Merge_4To8Bit, "4-8BIT" },
 			{ ChipType.Split_8To1Bit, "8-1BIT" },
 			{ ChipType.Split_8To4Bit, "8-4BIT" },
 
@@ -61,6 +61,7 @@ namespace DLS.Description
 			{ ChipType.Out_32Bit, "OUT-32" },
 
 			{ ChipType.Key, "KEY" },
+
 			// ---- Buses ----
 			{ ChipType.Bus_1Bit, "BUS-1" },
 			{ ChipType.Bus_4Bit, "BUS-4" },
