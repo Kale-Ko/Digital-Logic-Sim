@@ -128,8 +128,8 @@ namespace DLS.Game
 				if (InteractionState.PinUnderMouse != null)
 				{
 					SimPin simPin = Project.ActiveProject.rootSimChip.GetSimPinFromAddress(InteractionState.PinUnderMouse.Address);
-					ushort bitData = PinState.GetBitStates(simPin.State);
-					ushort tristateFlags = PinState.GetTristateFlags(simPin.State);
+					uint bitData = PinState.GetBitStates(simPin.State);
+					uint tristateFlags = PinState.GetTristateFlags(simPin.State);
 					string bitString = StringHelper.CreateBinaryString(bitData, true);
 					string triStateString = StringHelper.CreateBinaryString(tristateFlags, true);
 

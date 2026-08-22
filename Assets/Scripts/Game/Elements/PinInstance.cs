@@ -16,8 +16,8 @@ namespace DLS.Game
 
 		// Pin may be attached to a chip or a devPin as its parent
 		public readonly IMoveable parent;
-		public uint State; // sim state
-		public uint PlayerInputState; // dev input pins only
+		public ulong State; // sim state
+		public ulong PlayerInputState; // dev input pins only
 		public PinColour Colour;
 		bool faceRight;
 		public float LocalPosY;
@@ -70,12 +70,11 @@ namespace DLS.Game
 
 		public Color GetStateCol(int bitIndex, bool hover = false, bool canUsePlayerState = true)
 		{
-			uint pinState = (IsSourcePin && canUsePlayerState) ? PlayerInputState : State; // dev input pin uses player state (so it updates even when sim is paused)
-			uint state = PinState.GetBitTristatedValue(pinState, bitIndex);
+			ulong pinState = (IsSourcePin && canUsePlayerState) ? PlayerInputState : State; // dev input pin uses player state (so it updates even when sim is paused)
+			ulong state = PinState.GetBitTristatedValue(pinState, bitIndex);
 
 			if (state == PinState.LogicDisconnected) return DrawSettings.ActiveTheme.StateDisconnectedCol;
 			return DrawSettings.GetStateColour(state == PinState.LogicHigh, (uint)Colour, hover);
-			
 		}
 	}
 }
