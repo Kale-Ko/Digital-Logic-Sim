@@ -882,9 +882,9 @@ namespace Seb.Helpers
 
 		public static long TwosComplement(ulong unsignedValue, int numBits)
 		{
-			if (numBits < 32)
+			if (numBits < 64)
 			{
-				ulong unsignedRange = 1u << numBits;
+				ulong unsignedRange = 1ul << numBits;
 				ulong firstNegativeValue = unsignedRange >> 1;
 
 				if (unsignedValue >= firstNegativeValue)
